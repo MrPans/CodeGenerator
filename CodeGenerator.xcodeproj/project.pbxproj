@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B11E9441EC9DA28001F4782 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9431EC9DA28001F4782 /* AppDelegate.m */; };
+		3B11E9471EC9DA28001F4782 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9461EC9DA28001F4782 /* main.m */; };
+		3B11E94A1EC9DA28001F4782 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9491EC9DA28001F4782 /* ViewController.m */; };
+		3B11E94C1EC9DA28001F4782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B11E94B1EC9DA28001F4782 /* Assets.xcassets */; };
+		3B11E94F1EC9DA28001F4782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B11E94D1EC9DA28001F4782 /* Main.storyboard */; };
+		3B11E95A1EC9DA28001F4782 /* CodeGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9591EC9DA28001F4782 /* CodeGeneratorTests.m */; };
+		3B11E96B1EC9DA69001F4782 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B11E96A1EC9DA69001F4782 /* Cocoa.framework */; };
+		3B11E9711EC9DA69001F4782 /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9701EC9DA69001F4782 /* SourceEditorExtension.m */; };
+		3B11E9741EC9DA69001F4782 /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9731EC9DA69001F4782 /* SourceEditorCommand.m */; };
+		3B11E9781EC9DA69001F4782 /* Generate Code.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B11E9681EC9DA69001F4782 /* Generate Code.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3B11E9821EC9DAC0001F4782 /* AccessCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E97F1EC9DAC0001F4782 /* AccessCodeGenerator.m */; };
+		3B11E9831EC9DAC0001F4782 /* AccessCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E97F1EC9DAC0001F4782 /* AccessCodeGenerator.m */; };
+		3B11E9841EC9DAC0001F4782 /* PSProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9811EC9DAC0001F4782 /* PSProperty.m */; };
+		3B11E9851EC9DAC0001F4782 /* PSProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9811EC9DAC0001F4782 /* PSProperty.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B11E9561EC9DA28001F4782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B11E9371EC9DA28001F4782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B11E93E1EC9DA28001F4782;
+			remoteInfo = CodeGenerator;
+		};
+		3B11E9761EC9DA69001F4782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B11E9371EC9DA28001F4782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B11E9671EC9DA69001F4782;
+			remoteInfo = SourceEditorPlugin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B11E97C1EC9DA69001F4782 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3B11E9781EC9DA69001F4782 /* Generate Code.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3B11E93F1EC9DA28001F4782 /* CodeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B11E9421EC9DA28001F4782 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B11E9431EC9DA28001F4782 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B11E9461EC9DA28001F4782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B11E9481EC9DA28001F4782 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3B11E9491EC9DA28001F4782 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B11E94B1EC9DA28001F4782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B11E94E1EC9DA28001F4782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B11E9501EC9DA28001F4782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B11E9551EC9DA28001F4782 /* CodeGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B11E9591EC9DA28001F4782 /* CodeGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeGeneratorTests.m; sourceTree = "<group>"; };
+		3B11E95B1EC9DA28001F4782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B11E9681EC9DA69001F4782 /* Generate Code.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Generate Code.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B11E96A1EC9DA69001F4782 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3B11E96E1EC9DA69001F4782 /* SourceEditorPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SourceEditorPlugin.entitlements; sourceTree = "<group>"; };
+		3B11E96F1EC9DA69001F4782 /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		3B11E9701EC9DA69001F4782 /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		3B11E9721EC9DA69001F4782 /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
+		3B11E9731EC9DA69001F4782 /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
+		3B11E9751EC9DA69001F4782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B11E97E1EC9DAC0001F4782 /* AccessCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessCodeGenerator.h; sourceTree = "<group>"; };
+		3B11E97F1EC9DAC0001F4782 /* AccessCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessCodeGenerator.m; sourceTree = "<group>"; };
+		3B11E9801EC9DAC0001F4782 /* PSProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSProperty.h; sourceTree = "<group>"; };
+		3B11E9811EC9DAC0001F4782 /* PSProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSProperty.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B11E93C1EC9DA28001F4782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B11E9521EC9DA28001F4782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B11E9651EC9DA69001F4782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B11E96B1EC9DA69001F4782 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B11E9361EC9DA28001F4782 = {
+			isa = PBXGroup;
+			children = (
+				3B11E97D1EC9DAC0001F4782 /* Source */,
+				3B11E9411EC9DA28001F4782 /* CodeGenerator */,
+				3B11E9581EC9DA28001F4782 /* CodeGeneratorTests */,
+				3B11E96C1EC9DA69001F4782 /* SourceEditorPlugin */,
+				3B11E9691EC9DA69001F4782 /* Frameworks */,
+				3B11E9401EC9DA28001F4782 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B11E9401EC9DA28001F4782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B11E93F1EC9DA28001F4782 /* CodeGenerator.app */,
+				3B11E9551EC9DA28001F4782 /* CodeGeneratorTests.xctest */,
+				3B11E9681EC9DA69001F4782 /* Generate Code.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B11E9411EC9DA28001F4782 /* CodeGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				3B11E9421EC9DA28001F4782 /* AppDelegate.h */,
+				3B11E9431EC9DA28001F4782 /* AppDelegate.m */,
+				3B11E9481EC9DA28001F4782 /* ViewController.h */,
+				3B11E9491EC9DA28001F4782 /* ViewController.m */,
+				3B11E94B1EC9DA28001F4782 /* Assets.xcassets */,
+				3B11E94D1EC9DA28001F4782 /* Main.storyboard */,
+				3B11E9501EC9DA28001F4782 /* Info.plist */,
+				3B11E9451EC9DA28001F4782 /* Supporting Files */,
+			);
+			path = CodeGenerator;
+			sourceTree = "<group>";
+		};
+		3B11E9451EC9DA28001F4782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B11E9461EC9DA28001F4782 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B11E9581EC9DA28001F4782 /* CodeGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B11E9591EC9DA28001F4782 /* CodeGeneratorTests.m */,
+				3B11E95B1EC9DA28001F4782 /* Info.plist */,
+			);
+			path = CodeGeneratorTests;
+			sourceTree = "<group>";
+		};
+		3B11E9691EC9DA69001F4782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B11E96A1EC9DA69001F4782 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B11E96C1EC9DA69001F4782 /* SourceEditorPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				3B11E96F1EC9DA69001F4782 /* SourceEditorExtension.h */,
+				3B11E9701EC9DA69001F4782 /* SourceEditorExtension.m */,
+				3B11E9721EC9DA69001F4782 /* SourceEditorCommand.h */,
+				3B11E9731EC9DA69001F4782 /* SourceEditorCommand.m */,
+				3B11E9751EC9DA69001F4782 /* Info.plist */,
+				3B11E96D1EC9DA69001F4782 /* Supporting Files */,
+			);
+			path = SourceEditorPlugin;
+			sourceTree = "<group>";
+		};
+		3B11E96D1EC9DA69001F4782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B11E96E1EC9DA69001F4782 /* SourceEditorPlugin.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B11E97D1EC9DAC0001F4782 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3B11E97E1EC9DAC0001F4782 /* AccessCodeGenerator.h */,
+				3B11E97F1EC9DAC0001F4782 /* AccessCodeGenerator.m */,
+				3B11E9801EC9DAC0001F4782 /* PSProperty.h */,
+				3B11E9811EC9DAC0001F4782 /* PSProperty.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B11E93E1EC9DA28001F4782 /* CodeGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B11E95E1EC9DA28001F4782 /* Build configuration list for PBXNativeTarget "CodeGenerator" */;
+			buildPhases = (
+				3B11E93B1EC9DA28001F4782 /* Sources */,
+				3B11E93C1EC9DA28001F4782 /* Frameworks */,
+				3B11E93D1EC9DA28001F4782 /* Resources */,
+				3B11E97C1EC9DA69001F4782 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B11E9771EC9DA69001F4782 /* PBXTargetDependency */,
+			);
+			name = CodeGenerator;
+			productName = CodeGenerator;
+			productReference = 3B11E93F1EC9DA28001F4782 /* CodeGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B11E9541EC9DA28001F4782 /* CodeGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B11E9611EC9DA28001F4782 /* Build configuration list for PBXNativeTarget "CodeGeneratorTests" */;
+			buildPhases = (
+				3B11E9511EC9DA28001F4782 /* Sources */,
+				3B11E9521EC9DA28001F4782 /* Frameworks */,
+				3B11E9531EC9DA28001F4782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B11E9571EC9DA28001F4782 /* PBXTargetDependency */,
+			);
+			name = CodeGeneratorTests;
+			productName = CodeGeneratorTests;
+			productReference = 3B11E9551EC9DA28001F4782 /* CodeGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3B11E9671EC9DA69001F4782 /* Generate Code */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B11E9791EC9DA69001F4782 /* Build configuration list for PBXNativeTarget "Generate Code" */;
+			buildPhases = (
+				3B11E9641EC9DA69001F4782 /* Sources */,
+				3B11E9651EC9DA69001F4782 /* Frameworks */,
+				3B11E9661EC9DA69001F4782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Generate Code";
+			productName = SourceEditorPlugin;
+			productReference = 3B11E9681EC9DA69001F4782 /* Generate Code.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B11E9371EC9DA28001F4782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Sheng Pan";
+				TargetAttributes = {
+					3B11E93E1EC9DA28001F4782 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2U4X7NE3S9;
+						ProvisioningStyle = Automatic;
+					};
+					3B11E9541EC9DA28001F4782 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2U4X7NE3S9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3B11E93E1EC9DA28001F4782;
+					};
+					3B11E9671EC9DA69001F4782 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2U4X7NE3S9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3B11E93A1EC9DA28001F4782 /* Build configuration list for PBXProject "CodeGenerator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B11E9361EC9DA28001F4782;
+			productRefGroup = 3B11E9401EC9DA28001F4782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B11E93E1EC9DA28001F4782 /* CodeGenerator */,
+				3B11E9541EC9DA28001F4782 /* CodeGeneratorTests */,
+				3B11E9671EC9DA69001F4782 /* Generate Code */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B11E93D1EC9DA28001F4782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B11E94C1EC9DA28001F4782 /* Assets.xcassets in Resources */,
+				3B11E94F1EC9DA28001F4782 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B11E9531EC9DA28001F4782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B11E9661EC9DA69001F4782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B11E93B1EC9DA28001F4782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B11E9821EC9DAC0001F4782 /* AccessCodeGenerator.m in Sources */,
+				3B11E9841EC9DAC0001F4782 /* PSProperty.m in Sources */,
+				3B11E94A1EC9DA28001F4782 /* ViewController.m in Sources */,
+				3B11E9471EC9DA28001F4782 /* main.m in Sources */,
+				3B11E9441EC9DA28001F4782 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B11E9511EC9DA28001F4782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B11E95A1EC9DA28001F4782 /* CodeGeneratorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B11E9641EC9DA69001F4782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B11E9831EC9DAC0001F4782 /* AccessCodeGenerator.m in Sources */,
+				3B11E9711EC9DA69001F4782 /* SourceEditorExtension.m in Sources */,
+				3B11E9741EC9DA69001F4782 /* SourceEditorCommand.m in Sources */,
+				3B11E9851EC9DAC0001F4782 /* PSProperty.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B11E9571EC9DA28001F4782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B11E93E1EC9DA28001F4782 /* CodeGenerator */;
+			targetProxy = 3B11E9561EC9DA28001F4782 /* PBXContainerItemProxy */;
+		};
+		3B11E9771EC9DA69001F4782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B11E9671EC9DA69001F4782 /* Generate Code */;
+			targetProxy = 3B11E9761EC9DA69001F4782 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B11E94D1EC9DA28001F4782 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B11E94E1EC9DA28001F4782 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B11E95C1EC9DA28001F4782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3B11E95D1EC9DA28001F4782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3B11E95F1EC9DA28001F4782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				INFOPLIST_FILE = CodeGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		3B11E9601EC9DA28001F4782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				INFOPLIST_FILE = CodeGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		3B11E9621EC9DA28001F4782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				INFOPLIST_FILE = CodeGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeGenerator.app/Contents/MacOS/CodeGenerator";
+			};
+			name = Debug;
+		};
+		3B11E9631EC9DA28001F4782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				INFOPLIST_FILE = CodeGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeGenerator.app/Contents/MacOS/CodeGenerator";
+			};
+			name = Release;
+		};
+		3B11E97A1EC9DA69001F4782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SourceEditorPlugin/SourceEditorPlugin.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				INFOPLIST_FILE = SourceEditorPlugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGenerator.SourceEditorPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3B11E97B1EC9DA69001F4782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SourceEditorPlugin/SourceEditorPlugin.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				INFOPLIST_FILE = SourceEditorPlugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGenerator.SourceEditorPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B11E93A1EC9DA28001F4782 /* Build configuration list for PBXProject "CodeGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B11E95C1EC9DA28001F4782 /* Debug */,
+				3B11E95D1EC9DA28001F4782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B11E95E1EC9DA28001F4782 /* Build configuration list for PBXNativeTarget "CodeGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B11E95F1EC9DA28001F4782 /* Debug */,
+				3B11E9601EC9DA28001F4782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B11E9611EC9DA28001F4782 /* Build configuration list for PBXNativeTarget "CodeGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B11E9621EC9DA28001F4782 /* Debug */,
+				3B11E9631EC9DA28001F4782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B11E9791EC9DA69001F4782 /* Build configuration list for PBXNativeTarget "Generate Code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B11E97A1EC9DA69001F4782 /* Debug */,
+				3B11E97B1EC9DA69001F4782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B11E9371EC9DA28001F4782 /* Project object */;
+}
