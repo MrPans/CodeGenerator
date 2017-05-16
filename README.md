@@ -7,7 +7,7 @@ A Xcode plugin for generate Objectice-C code.
 
 ## Install on Xcode 8
 1. download the whole project and build.
-2. copy `XAlign.app` to `/Applications` folder.
+2. copy `CodeGenerator.app` to `/Applications` folder.
 3. Run it then close it.
 
 ## Usage
