@@ -3,7 +3,14 @@ A Xcode plugin for generate Objectice-C code.
 
 ### Preview
 
-![Equal](https://raw.githubusercontent.com/DeveloperPans/CodeGenerator/master/images/preview.gif)
+![](https://raw.githubusercontent.com/DeveloperPans/CodeGenerator/master/images/preview.gif)
+
+### Goal
+
+- [x] Lazy Getter.
+- [ ] Setter.
+- [ ] Override Methods (waiting for more extension api)
+
 
 ## Install on Xcode 8
 1. download the whole project and build.
