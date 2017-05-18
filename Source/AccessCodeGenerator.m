@@ -43,10 +43,10 @@
             {
                 continue;
             }
-            
+            // “NSArray<NSArray<NSString" ">"">""name"
             PSProperty * proMoel = [[PSProperty alloc] init];
             proMoel.keywords = keywords;
-            proMoel.dataType      = [dataTypeAndName firstObject];
+            proMoel.dataType      = [[dataTypeAndName subarrayWithRange:NSMakeRange(0, dataTypeAndName.count - 1)] componentsJoinedByString:@" *"];
             proMoel.name          = [dataTypeAndName lastObject];
             [result addObject:proMoel];
         }
@@ -92,11 +92,13 @@
             
             NSString *resultString = [[propertyStr substringWithRange:matchedRange]
                                       stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+            // ) NSArray  <NSArray <  NSString *> *> *name;
             resultString = [resultString stringByReplacingOccurrencesOfString:@")" withString:@""];
             resultString = [resultString stringByReplacingOccurrencesOfString:@";" withString:@""];
+            // NSArray  <NSArray <  NSString *> *> *name
             if([propertyStr containsString:@"*"])
             {
-
+                // NSArray<NSArray<NSString*>*>*name
                 resultString = [resultString stringByReplacingOccurrencesOfString:@" " withString:@""];
                 result =  [resultString componentsSeparatedByString:@"*"].mutableCopy;
             }
