@@ -14,7 +14,6 @@
 @property (nonatomic, strong) NSArray *array;
 @property (nonatomic, strong) PSProperty *node;
 
-
 @end
 
 @implementation PSProperty

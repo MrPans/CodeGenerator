@@ -10,4 +10,5 @@
 
 @interface SourceEditorCommand : NSObject <XCSourceEditorCommand>
 
+
 @end

@@ -11,7 +11,7 @@
 static NSString *const ASSIGN = @"assign";
 static NSString *const WEAK = @"weak";
 
-static NSString *const ID = @"weak";
+static NSString *const ID = @"id";
 
 static NSString *const IB_OUTLET = @"IBOutlet";
 

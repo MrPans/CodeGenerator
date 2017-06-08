@@ -104,12 +104,16 @@
             }
             else
             {
+                // 不带 * ，要么是 id 要么是基础类型，要么是宏定义的类型。
                 result =  [resultString componentsSeparatedByString:@" "].mutableCopy;
                 [result enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     if ([obj isEqualToString:@""]) {
                         [result removeObject:obj];
                     }
                 }];
+                if (![result containsObject:ID]) {
+                    [result removeAllObjects];
+                }
             }
             return result;
         }
