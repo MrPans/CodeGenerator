@@ -10,10 +10,9 @@
 
 static NSString *const ASSIGN = @"assign";
 static NSString *const WEAK = @"weak";
-
 static NSString *const ID = @"id";
-
 static NSString *const IB_OUTLET = @"IBOutlet";
+//static NSString *const BASIC_DATA_TYPE = @"NSInteger,NSUInteger,char,int,float,double,long,short,signed,unsigned,BOOL,Bool,bool,Boolean";
 
 
 @interface PSProperty : NSObject
@@ -24,9 +23,10 @@ static NSString *const IB_OUTLET = @"IBOutlet";
 /**
  *  数据类型
  */
-@property (nonatomic,strong) NSString * dataType;
+@property (nonatomic,strong) NSString *dataType;
 /**
  *  属性名称
  */
-@property (nonatomic,strong) NSString * name;
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic, assign) BOOL isObjectType;/**< 是不是带 * 的类型*/
 @end

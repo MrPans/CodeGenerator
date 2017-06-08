@@ -13,6 +13,8 @@
 @property (nonatomic, strong) NSString *string;
 @property (nonatomic, strong) NSArray *array;
 @property (nonatomic, strong) PSProperty *node;
+@property (nonatomic, assign) NSInteger haha;
+@property (nonatomic, strong) id idnAme;
 
 @end
 

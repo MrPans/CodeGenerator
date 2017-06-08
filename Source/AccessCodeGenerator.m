@@ -19,6 +19,15 @@
     return result;
 }
 
++ (NSArray<NSString *> *)setterForString:(NSString *)string {
+    NSArray<PSProperty *> *props = [self propertyWithContent:string];
+    NSMutableArray *result = [NSMutableArray array];
+    for (PSProperty *model in props) {
+        [result addObject:[self setterWithPSProperty:model]];
+    }
+    return result;
+}
+
 + (NSArray<PSProperty *> *)propertyWithContent:(NSString *)content
 {
     NSMutableArray *result = [NSMutableArray array];
@@ -48,6 +57,7 @@
             proMoel.keywords = keywords;
             proMoel.dataType      = [[dataTypeAndName subarrayWithRange:NSMakeRange(0, dataTypeAndName.count - 1)] componentsJoinedByString:@" *"];
             proMoel.name          = [dataTypeAndName lastObject];
+            proMoel.isObjectType   = [propertyString containsString:@"*"];
             [result addObject:proMoel];
         }
     }
@@ -70,6 +80,7 @@
             NSString *resultString = [[propertyStr1 substringWithRange:firstHalfRange] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             resultString = [resultString stringByReplacingOccurrencesOfString:@"(" withString:@""];
             resultString = [resultString stringByReplacingOccurrencesOfString:@")" withString:@""];
+            resultString = [resultString stringByReplacingOccurrencesOfString:@" " withString:@""];
             return  [resultString componentsSeparatedByString:@","];
         }
     }
@@ -111,9 +122,6 @@
                         [result removeObject:obj];
                     }
                 }];
-                if (![result containsObject:ID]) {
-                    [result removeAllObjects];
-                }
             }
             return result;
         }
@@ -138,5 +146,24 @@
     return lazyGetter;
 }
 
++ (NSString *)setterWithPSProperty:(PSProperty *)model {
+    NSString *setter = @"";
+    if (model.isObjectType) {
+        setter = [NSString stringWithFormat:@"\n- (void)set%@:(%@ *)%@ {\n    _%@ = %@;\n}",
+                  [model.name capitalizedString],
+                  model.dataType,
+                  model.name,
+                  model.name,
+                  model.name];
+    } else {
+        setter = [NSString stringWithFormat:@"\n- (void)set%@:(%@)%@ {\n    _%@ = %@;\n}",
+                  [model.name capitalizedString],
+                  model.dataType,
+                  model.name,
+                  model.name,
+                  model.name];
+    }
+    return setter;
+}
 
 @end
