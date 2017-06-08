@@ -8,7 +8,7 @@ A Xcode plugin for generate Objectice-C code.
 ### Goal
 
 - [x] Lazy Getter.
-- [ ] Setter.
+- [x] Setter.
 - [ ] Override Methods (waiting for more extension api)
 
 
@@ -29,6 +29,12 @@ Check <kbd>System Preferences</kbd> -> <kbd>Extensions</kbd> -> <kbd>Xocde Sourc
 <kbd>Preferences</kbd> -> <kbd>Key bindings</kbd> -> <kbd>Filter: generate code</kbd>
 
 ![](https://raw.githubusercontent.com/DeveloperPans/CodeGenerator/master/images/xcode_setting.png)
+
+
+Set Lazy Getter command shortcut to <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>G</kbd>
+
+Set Setter command shortcut to <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>S</kbd>
+
 
 ## LICENSE
 
