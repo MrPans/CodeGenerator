@@ -13,7 +13,7 @@ A Xcode plugin for generate Objectice-C code.
 
 
 ## Install on Xcode 8
-1. download [CodeGenerator.zip](https://github.com/DeveloperPans/CodeGenerator/releases/download/1.0.1/CodeGenerator.zip), and unarchive it.
+1. download [CodeGenerator.zip](https://github.com/DeveloperPans/CodeGenerator/releases/download/1.1.0/CodeGenerator.app.zip), and unarchive it.
 2. copy `CodeGenerator.app` to `/Applications` folder.
 3. Run it then close it.
 
