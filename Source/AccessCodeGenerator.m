@@ -148,16 +148,22 @@
 
 + (NSString *)setterWithPSProperty:(PSProperty *)model {
     NSString *setter = @"";
+    if (model.name.length < 1) {
+        return setter;
+    }
+    
+    NSString *firstLetter = [model.name substringToIndex:1];
+    NSString *name = [model.name stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstLetter.uppercaseString];
     if (model.isObjectType) {
         setter = [NSString stringWithFormat:@"\n- (void)set%@:(%@ *)%@ {\n    _%@ = %@;\n}",
-                  [model.name capitalizedString],
+                  name,
                   model.dataType,
                   model.name,
                   model.name,
                   model.name];
     } else {
         setter = [NSString stringWithFormat:@"\n- (void)set%@:(%@)%@ {\n    _%@ = %@;\n}",
-                  [model.name capitalizedString],
+                  name,
                   model.dataType,
                   model.name,
                   model.name,
