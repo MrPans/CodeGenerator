@@ -12,6 +12,8 @@ static NSString *const ASSIGN = @"assign";
 static NSString *const WEAK = @"weak";
 static NSString *const ID = @"id";
 static NSString *const IB_OUTLET = @"IBOutlet";
+static NSString *const CLASS = @"class";
+
 //static NSString *const BASIC_DATA_TYPE = @"NSInteger,NSUInteger,char,int,float,double,long,short,signed,unsigned,BOOL,Bool,bool,Boolean";
 
 

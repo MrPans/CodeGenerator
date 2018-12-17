@@ -135,7 +135,9 @@
     NSString *lazyGetter = @"";
     if (![model.keywords containsObject:ASSIGN]
         && ![model.dataType isEqualToString:ID]) {
-        lazyGetter = [NSString stringWithFormat:@"\n- (%@ *)%@ {\n	if (!_%@) {\n        _%@ = [[%@ alloc] init];\n	}\n	return _%@;\n}",
+        NSString *functionType = [model.keywords containsObject:CLASS] ? @"+" : @"-";
+        lazyGetter = [NSString stringWithFormat:@"\n%@ (%@ *)%@ {\n	if (!_%@) {\n        _%@ = [[%@ alloc] init];\n	}\n	return _%@;\n}",
+                      functionType,
                       model.dataType,
                       model.name,
                       model.name,
@@ -154,15 +156,18 @@
     
     NSString *firstLetter = [model.name substringToIndex:1];
     NSString *name = [model.name stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstLetter.uppercaseString];
+    NSString *functionType = [model.keywords containsObject:CLASS] ? @"+" : @"-";
     if (model.isObjectType) {
-        setter = [NSString stringWithFormat:@"\n- (void)set%@:(%@ *)%@ {\n    _%@ = %@;\n}",
+        setter = [NSString stringWithFormat:@"\n%@ (void)set%@:(%@ *)%@ {\n    _%@ = %@;\n}",
+                  functionType,
                   name,
                   model.dataType,
                   model.name,
                   model.name,
                   model.name];
     } else {
-        setter = [NSString stringWithFormat:@"\n- (void)set%@:(%@)%@ {\n    _%@ = %@;\n}",
+        setter = [NSString stringWithFormat:@"\n%@ (void)set%@:(%@)%@ {\n    _%@ = %@;\n}",
+                  functionType,
                   name,
                   model.dataType,
                   model.name,

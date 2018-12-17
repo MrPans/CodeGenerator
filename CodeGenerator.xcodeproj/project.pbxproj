@@ -12,7 +12,6 @@
 		3B11E94A1EC9DA28001F4782 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9491EC9DA28001F4782 /* ViewController.m */; };
 		3B11E94C1EC9DA28001F4782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B11E94B1EC9DA28001F4782 /* Assets.xcassets */; };
 		3B11E94F1EC9DA28001F4782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B11E94D1EC9DA28001F4782 /* Main.storyboard */; };
-		3B11E95A1EC9DA28001F4782 /* CodeGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9591EC9DA28001F4782 /* CodeGeneratorTests.m */; };
 		3B11E96B1EC9DA69001F4782 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B11E96A1EC9DA69001F4782 /* Cocoa.framework */; };
 		3B11E9711EC9DA69001F4782 /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9701EC9DA69001F4782 /* SourceEditorExtension.m */; };
 		3B11E9741EC9DA69001F4782 /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11E9731EC9DA69001F4782 /* SourceEditorCommand.m */; };
@@ -24,13 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B11E9561EC9DA28001F4782 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B11E9371EC9DA28001F4782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B11E93E1EC9DA28001F4782;
-			remoteInfo = CodeGenerator;
-		};
 		3B11E9761EC9DA69001F4782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B11E9371EC9DA28001F4782 /* Project object */;
@@ -64,7 +56,6 @@
 		3B11E94B1EC9DA28001F4782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B11E94E1EC9DA28001F4782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B11E9501EC9DA28001F4782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B11E9551EC9DA28001F4782 /* CodeGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B11E9591EC9DA28001F4782 /* CodeGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeGeneratorTests.m; sourceTree = "<group>"; };
 		3B11E95B1EC9DA28001F4782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B11E9681EC9DA69001F4782 /* Generate Code.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Generate Code.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,13 +74,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		3B11E93C1EC9DA28001F4782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B11E9521EC9DA28001F4782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				3B11E93F1EC9DA28001F4782 /* CodeGenerator.app */,
-				3B11E9551EC9DA28001F4782 /* CodeGeneratorTests.xctest */,
 				3B11E9681EC9DA69001F4782 /* Generate Code.appex */,
 			);
 			name = Products;
@@ -223,24 +206,6 @@
 			productReference = 3B11E93F1EC9DA28001F4782 /* CodeGenerator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3B11E9541EC9DA28001F4782 /* CodeGeneratorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B11E9611EC9DA28001F4782 /* Build configuration list for PBXNativeTarget "CodeGeneratorTests" */;
-			buildPhases = (
-				3B11E9511EC9DA28001F4782 /* Sources */,
-				3B11E9521EC9DA28001F4782 /* Frameworks */,
-				3B11E9531EC9DA28001F4782 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3B11E9571EC9DA28001F4782 /* PBXTargetDependency */,
-			);
-			name = CodeGeneratorTests;
-			productName = CodeGeneratorTests;
-			productReference = 3B11E9551EC9DA28001F4782 /* CodeGeneratorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		3B11E9671EC9DA69001F4782 /* Generate Code */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B11E9791EC9DA69001F4782 /* Build configuration list for PBXNativeTarget "Generate Code" */;
@@ -269,18 +234,12 @@
 				TargetAttributes = {
 					3B11E93E1EC9DA28001F4782 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2U4X7NE3S9;
+						DevelopmentTeam = AE5B4P8L99;
 						ProvisioningStyle = Automatic;
-					};
-					3B11E9541EC9DA28001F4782 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2U4X7NE3S9;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 3B11E93E1EC9DA28001F4782;
 					};
 					3B11E9671EC9DA69001F4782 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2U4X7NE3S9;
+						DevelopmentTeam = AE5B4P8L99;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -299,7 +258,6 @@
 			projectRoot = "";
 			targets = (
 				3B11E93E1EC9DA28001F4782 /* CodeGenerator */,
-				3B11E9541EC9DA28001F4782 /* CodeGeneratorTests */,
 				3B11E9671EC9DA69001F4782 /* Generate Code */,
 			);
 		};
@@ -312,13 +270,6 @@
 			files = (
 				3B11E94C1EC9DA28001F4782 /* Assets.xcassets in Resources */,
 				3B11E94F1EC9DA28001F4782 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B11E9531EC9DA28001F4782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +295,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B11E9511EC9DA28001F4782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B11E95A1EC9DA28001F4782 /* CodeGeneratorTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B11E9641EC9DA69001F4782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,11 +309,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B11E9571EC9DA28001F4782 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B11E93E1EC9DA28001F4782 /* CodeGenerator */;
-			targetProxy = 3B11E9561EC9DA28001F4782 /* PBXContainerItemProxy */;
-		};
 		3B11E9771EC9DA69001F4782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B11E9671EC9DA69001F4782 /* Generate Code */;
@@ -485,7 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				DEVELOPMENT_TEAM = AE5B4P8L99;
 				INFOPLIST_FILE = CodeGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGenerator;
@@ -500,40 +438,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				DEVELOPMENT_TEAM = AE5B4P8L99;
 				INFOPLIST_FILE = CodeGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Release;
-		};
-		3B11E9621EC9DA28001F4782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2U4X7NE3S9;
-				INFOPLIST_FILE = CodeGeneratorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGeneratorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeGenerator.app/Contents/MacOS/CodeGenerator";
-			};
-			name = Debug;
-		};
-		3B11E9631EC9DA28001F4782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2U4X7NE3S9;
-				INFOPLIST_FILE = CodeGeneratorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.shengpan.CodeGeneratorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeGenerator.app/Contents/MacOS/CodeGenerator";
 			};
 			name = Release;
 		};
@@ -543,7 +453,7 @@
 				CODE_SIGN_ENTITLEMENTS = SourceEditorPlugin/SourceEditorPlugin.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				DEVELOPMENT_TEAM = AE5B4P8L99;
 				INFOPLIST_FILE = SourceEditorPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -560,7 +470,7 @@
 				CODE_SIGN_ENTITLEMENTS = SourceEditorPlugin/SourceEditorPlugin.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2U4X7NE3S9;
+				DEVELOPMENT_TEAM = AE5B4P8L99;
 				INFOPLIST_FILE = SourceEditorPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -588,15 +498,6 @@
 			buildConfigurations = (
 				3B11E95F1EC9DA28001F4782 /* Debug */,
 				3B11E9601EC9DA28001F4782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B11E9611EC9DA28001F4782 /* Build configuration list for PBXNativeTarget "CodeGeneratorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B11E9621EC9DA28001F4782 /* Debug */,
-				3B11E9631EC9DA28001F4782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
