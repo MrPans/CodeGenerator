@@ -5,6 +5,9 @@ A Xcode plugin for generate Objectice-C code.
 
 ![](https://raw.githubusercontent.com/DeveloperPans/CodeGenerator/master/images/preview.gif)
 
+> CodeGenerator Will add getter & setter in appropriate position even if there are several classes in one file
+
+
 ### Goal
 
 - [x] Lazy Getter.
