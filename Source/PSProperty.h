@@ -20,15 +20,15 @@ static NSString *const CLASS = @"class";
 @interface PSProperty : NSObject
 
 // nonatomic atomic strong weak assign retain getter= setter= class readonly ...
-@property (nonatomic, strong) NSArray<NSString *> *keywords;
+@property (nonatomic, copy) NSArray<NSString *> *keywords;
 
 /**
  *  数据类型
  */
-@property (nonatomic,strong) NSString *dataType;
+@property (nonatomic, copy) NSString *dataType;
 /**
  *  属性名称
  */
-@property (nonatomic,strong) NSString *name;
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) BOOL isObjectType;/**< 是不是带 * 的类型*/
 @end
