@@ -16,7 +16,8 @@
     for (PSProperty *model in props) {
         [result addObject:[self getterWithPSProperty:model]];
     }
-    return result;
+    NSArray *reverseArray = [[result reverseObjectEnumerator] allObjects];
+    return reverseArray;
 }
 
 + (NSArray<NSString *> *)setterForString:(NSString *)string {
